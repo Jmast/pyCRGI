@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import warnings
+from typing import Tuple
 
 from .._coeffs import GH
 from .._debug import typechecked, DEBUG
 
 
 @typechecked
-def get_coeffs(year: float) -> tuple[list, list]:
+def get_coeffs(year: float) -> Tuple[list, list]:
     """
     Processes coefficients
 

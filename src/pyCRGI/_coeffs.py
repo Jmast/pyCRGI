@@ -2,11 +2,13 @@
 
 import os
 
+from typing import List
+
 from ._debug import typechecked
 
 
 @typechecked
-def load_coeffs(filename: str) -> list[float]:
+def load_coeffs(filename: str) -> List[float]:
     """
     Loads IGRF coefficients from file.
 

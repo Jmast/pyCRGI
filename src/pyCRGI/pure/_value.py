@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from math import atan2, sqrt, pi
+from typing import Tuple
 
 from .._debug import typechecked
 from ._calculate import get_syn
@@ -15,7 +16,7 @@ def get_value(
     lon: float,
     alt: float,
     year: float,
-) -> tuple[float, float, float, float, float, float, float]:
+) -> Tuple[float, float, float, float, float, float, float]:
     """
     Computes magnetic field values at given point in space.
 
@@ -49,7 +50,7 @@ def get_variation(
     lon: float,
     alt: float,
     year: float,
-) -> tuple[float, float, float, float, float, float, float]:
+) -> Tuple[float, float, float, float, float, float, float]:
     """
     Computes annual variation of magnetic field values at given point in space.
 

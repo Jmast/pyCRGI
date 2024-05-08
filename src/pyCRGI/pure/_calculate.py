@@ -2,6 +2,7 @@
 
 from math import sin, cos, sqrt, atan2, pi
 import warnings
+from typing import Tuple
 
 from .._debug import typechecked, DEBUG
 from ._coeffs import get_coeffs
@@ -14,7 +15,7 @@ FACT = 180.0 / pi
 def geodetic2geocentric(
     theta: float,
     alt: float,
-) -> tuple[float, float, float]:
+) -> Tuple[float, float, float]:
     """
     Conversion from geodetic to geocentric coordinates by using the WGS84 spheroid.
 
@@ -52,7 +53,7 @@ def get_syn(
     alt: float, # double!
     lat: float, # double!
     elong: float, # double!
-) -> tuple[float, float, float, float]: # TODO check 12th gen vs 13th gen synthesis routine
+) -> Tuple[float, float, float, float]: # TODO check 12th gen vs 13th gen synthesis routine
     """
     This is a synthesis routine for the 12th generation IGRF as agreed
     in December 2014 by IAGA Working Group V-MOD. It is valid 1900.0 to

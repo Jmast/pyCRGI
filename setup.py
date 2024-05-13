@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import os
 from setuptools import setup, find_packages
 
 
@@ -8,6 +8,10 @@ SRC_DIR = "src"
 
 with open("README.md", mode = 'r', encoding = 'utf-8') as f:
     readme = f.read()
+
+data_files = [
+    os.path.join(SRC_DIR, "pyCRGI/data/igrf13coeffs.txt")
+]
 
 
 setup(
@@ -22,6 +26,8 @@ setup(
     url = "https://github.com/pleiszenburg/pyCRGI",
     packages = find_packages(SRC_DIR),
     package_dir = {"": SRC_DIR},
+    include_package_data=True,
+    package_data = {"pyCRGI/data": data_files},
     install_requires = [],
     extras_require = {
         "jited": [
